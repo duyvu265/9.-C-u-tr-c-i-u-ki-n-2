@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<h1>Tính chỉ số cân nặng</h1>
+Nhập cân nặng :(kg)<input id="nang" type="text">
+<br>
+Nhập chiều cao :(m)<input id="cao" type="text">
+<button onclick="test()">kiểm tra</button>
+<b id="ketqua"></b>
+<script>
+    function test() {
+        let a = document.getElementById("nang").value;
+        let b = document.getElementById("cao").value;
+        let c = a / (b ^ 2);
+        if (c < 18) {
+            document.write("underweight :gầy nhá");
+        } else if (c < 25) {
+            document.write("normal: quá bình thường");
+        } else if (c < 30) {
+            document.write("overweight :béo vãi chưởng");
+        } else {
+            document.write("obese: không hiểu kiểu gì");
+        }
+        document.getElementById("ketqua").innerHTML = "kết quả của bạn là " + c;
+
+
+    }
+
+</script>
+
+
+</body>
+</html>
