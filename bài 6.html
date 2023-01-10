@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> do you love me</title>
+</head>
+<body>
+<h1>Do you love me</h1>
+<button id="yes" onclick="yes()"> yes</button>
+<button style="position: absolute" id="no" onmouseover="random()" onclick="no">no</button>
+<p id="demo"></p>
+<script>
+    function yes() {
+        alert("当たり前じゃないか");
+    }
+
+    function random() {
+        let a = Math.round(Math.random() * window.innerHeight);
+        let b = Math.round(Math.random() * window.innerWidth);
+        document.getElementById("no").style.left = b + "px";
+        document.getElementById("no").style.top = a + "px";
+    }
+
+</script>
+</body>
+</html>
