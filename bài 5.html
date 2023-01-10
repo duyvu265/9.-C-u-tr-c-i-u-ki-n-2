@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<h4>MÁY TÍNH ĐƠN GIẢN</h4>
+<table border="1" width="auto" h>
+  <tr>
+    <td  colspan="4"><input id="demo" type="text" placeholder="nhập vào"></td>
+  </tr>
+  <tr>
+    <td><button value="1" onclick="nhap('1')">1</button></td>
+    <td><button value="2" onclick="nhap('2')">2</button></td>
+    <td><button value="3" onclick="nhap('3')">3</button></td>
+    <td><button value="cong" onclick="nhap('+')">+</button></td>
+  </tr>
+  <tr>
+    <td><button value="4" onclick="nhap('4')">4</button></td>
+    <td><button value="5" onclick="nhap('5')">5</button></td>
+    <td><button value="6" onclick="nhap('6')">6</button></td>
+    <td><button value="tru" onclick="nhap('-')">-</button></td>
+  </tr>
+  <tr>
+    <td><button value="7" onclick="nhap('7')">7</button></td>
+    <td><button value="8" onclick="nhap('8')">8</button></td>
+    <td><button value="9" onclick="nhap('9')">9</button></td>
+    <td><button value="nhan" onclick="nhap('*')">*</button></td>
+  </tr>
+  <tr>
+    <td><button value="C" onclick="xoa('C')">C</button></td>
+    <td><button value="0" onclick="nhap('0')">0</button></td>
+    <td><button value="bang" onclick="bang('=')">=</button></td>
+    <td><button value="chia" onclick="nhap('/')">/</button></td>
+  </tr>
+</table>
+<script>
+  function nhap(value) {
+    document.getElementById("demo").value += value;
+
+  }
+  function bang() {
+    let a =document.getElementById("demo").value;
+    let bang = eval( a);
+    document.getElementById("demo").value=bang;
+  }
+  function xoa() {
+     document.getElementById("demo").value = "";
+  }
+</script>
+</body>
+</html>
